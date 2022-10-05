@@ -1,0 +1,21 @@
+import java.util.Scanner;
+
+public class Main {
+    static int num = 0;
+
+    public static void lol() {
+        if(num==0){
+            return;
+        }
+        int i  = num;
+        num = num / 10;
+        lol();
+        System.out.print(i%10+" ");
+    }
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        num  = scanner.nextInt();
+        lol();
+    }
+}
